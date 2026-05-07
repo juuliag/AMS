@@ -21,7 +21,7 @@
 }
 
 * {
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
 }
 
 body {
@@ -80,4 +80,29 @@ header {
     font-size: 20px;
     border: none;
     cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor-header);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header button {
+    position: absolute;
+    left: 40px;
+    top: 13%;
+    transform: translate(-50%);
+
+    /*estilo visual para aparecer um botão*/
+    background-color: transparent;
+    color: var(--cor-borda);
+    border: 1px solid var(--cor-borda);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
 }
