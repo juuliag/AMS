@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Odontologico</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="cabesario">
+            <h1 id="titulo"> Agendamento </h1>
+            <p id="subtitulo">Complete suas informações para agendamento</p>
+        </div>
+        <form action="#" method="post" autocomplete="off">
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome completo"><strong>Nome Completo</strong></label>
+                    <input type="text" name="nome completo" id="nome completo" required>
+                </div>
+            </fieldset>
+            <div class="campo">
+                <label for="cpf"><strong>CPF</strong></label>
+                <input type="cpf" name="cpf" id="cpf" required>
+            </div>
+            <div class="campo">
+                <label for="data nascimento"><strong>Data de Nascimento</strong></label>
+                <input type="data nascimento" name="data nascimento" id="data nascimento" placeholder="DD/MM/AAAA" required>
+            </div>
+            <div class="campo">
+                <label for="telefone"><strong>Telefone</strong></label>
+                <input type="telefone" name="telefone"required>
+            </div>
+            <div class="campo">
+                <label for="email"><strong>E-mail</strong></label>
+                <input type="email" name="email">
+            </div>
+            <div class="campo">
+                <label for="tipo de atendimento"><strong>Tipo de atendimento</strong></label>
+                <select name="tipo de atendimento" id="tipo de atendimento">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="avaliacao/consulta">Avaliação / Consulta</option>
+                    <option value="limpeza dentaria">Limpeza dentária</option>
+                    <option value="restauracao">Restauração</option>
+                    <option value="extracao">Extração</option>
+                    <option value="emergencia">Emergência</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="data do atendimento"><strong>Data do Atendimento</strong></label>
+                <input type="datetime-local" id="data do atendimento" required>
+            </div>
+            <div class="campo">
+                <label for="observacao">observações</label>
+                <textarea name="observacao" id="observacao" rows="6" cols="47" placeholder="Digite alguma observação"></textarea>
+            </div>
+            <div class="button">
+                <button class="botao" type="submit">Agendamento concluido</button>
+                <a href="info.html">Informações do agendamento</a>
+            </div>
+        </form>
+    </main>
+    <footer class="footer_center">
+        <p>&copy;2026 cadastro de agendamento clinica JMS Odonto. Todods os direitos reservados</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
