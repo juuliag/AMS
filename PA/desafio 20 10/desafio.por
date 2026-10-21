@@ -4,6 +4,7 @@ programa {
     inteiro opcao
     inteiro linha
     inteiro coluna
+    inteiro livres, ocupados
     // inicializando todos os assentos como livre
     para(inteiro i = 0; i < 4; i++)
     {
@@ -68,43 +69,12 @@ programa {
         sala[linha][coluna] = 1
 
         escreva("\nAssento reservado com sucesso!\n")
-      }
-      senao
-      {
-        escreva("\nERRO: Este assento já está ocupado.\n")
-      }
-    }
-    senao
-    {
-      escreva("\nERRO: Assento inválido.\n")
-      pare
-    }
 
-    caso 2: 
-    escreva("\nInforme a linha do assento: ")
-    leia(linha)
-
-    escreva("Informe a coluna do assento: ")
-    leia(coluna)
-
-    limpa()
-
-    se(sala[linha][coluna] == 1) {
-      sala[linha][coluna] = 0
-
-      escreva("Reserva cancelada com sucesso!\n")
-    } senao {
-      escreva("Este assento já está livre!\n")
-    }
-
-    caso 3:
-    
-  }
-   escreva("#######################\n")
-    escreva("    SALA ATUALIZADA\n")
+        escreva("#######################\n")
+    escreva("SALA ATUALIZADA!\n")
     escreva("#######################\n\n")
 
-   escreva("      0   1   2   3   4\n")
+    escreva("      0   1   2   3   4\n")
 
     para(inteiro i = 0; i < 4; i++) 
     {
@@ -123,7 +93,128 @@ programa {
       }
 
         escreva("\n")
+      }}
+      senao
+      {
+        escreva("\nERRO: Este assento já está ocupado.\n")
+      }
+    }
+    senao
+    {
+      escreva("\nERRO: Assento inválido.\n")
+      
 
+        escreva("\n")
+        pare
+    }
+
+    escreva("\n_____________________\n")
+    escreva(" 1. reservar assento\n")
+    escreva(" 2. cancelar reserva\n")
+    escreva(" 3. Quantidade de assentos disponíveis\n")
+    escreva(" 4. sair\n")
+    escreva("_____________________\n")
+    leia(opcao)
+
+    escolha(opcao){}
+    limpa()
+
+    caso 2: 
+    escreva("\nInforme a linha do assento: ")
+    leia(linha)
+
+    escreva("Informe a coluna do assento: ")
+    leia(coluna)
+
+    limpa()
+
+    se(sala[linha][coluna] == 1) {
+      sala[linha][coluna] = 0
+
+      escreva("Reserva cancelada com sucesso!\n")
+
+      escreva("#######################\n")
+    escreva("    SALA ATUALIZADA\n")
+    escreva("#######################\n\n")
+
+   escreva("      0   1   2   3   4\n")
+
+    para(inteiro i = 0; i < 4; i++) 
+    {
+      escreva(" ", i ,"   ")
+
+      para(inteiro j = 0; j < 5; j++)
+      {
+        se (sala[i][j] == 0)
+          {
+            escreva("[ ] ")
+          }
+          senao 
+            {
+              escreva("[X] ")
+            
+            }
+      }
+
+        escreva("\n")
+        
+    }
+
+    } senao {
+      escreva("Este assento já está livre!\n")
+    }
+
+      escreva("\n_____________________\n")
+    escreva(" 1. reservar assento\n")
+    escreva(" 2. cancelar reserva\n")
+    escreva(" 3. Quantidade de assentos disponíveis\n")
+    escreva(" 4. sair\n")
+    escreva("_____________________\n")
+    leia(opcao)
+
+    escolha(opcao){}
+
+    limpa()
+    caso 3:
+    livres = 0
+                    ocupados = 0
+
+                    para (inteiro i = 0; i < 4; i++)
+                    {
+                        para (inteiro j = 0; j < 5; j++)
+                        {
+                            se (sala[i][j] == 0)
+                            {
+                                livres++
+                            }
+                            senao
+                            {
+                                ocupados++
+                            }
+                        }
+                    }
+
+                    escreva("\n--- QUANTIDADE DE LUGARES ---\n")
+                    escreva("Lugares livres: ", livres, "\n")
+                    escreva("Lugares ocupados: ", ocupados, "\n")
+                    escreva("Total de assentos: ", livres + ocupados, "\n")
+
+                    escreva("\n_____________________\n")
+    escreva(" 1. reservar assento\n")
+    escreva(" 2. cancelar reserva\n")
+    escreva(" 3. Quantidade de assentos disponíveis\n")
+    escreva(" 4. sair\n")
+    escreva("_____________________\n")
+    leia(opcao)
+
+    escolha(opcao){}
+    limpa()
+
+      caso 4:
+      escreva("Encerrando...")
+      pare
+
+  }
+  
     }
   }
-}
