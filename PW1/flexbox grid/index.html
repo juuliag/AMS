@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasa & Broto | Restaurante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="topo">
+        <a class="logo" href="#inicio">Brasa & Broto</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardápio">Cardápio</a></li>
+                <li><a href="#visite"></a>Visite</li>
+                <li><a class="botao" href="#visite">Reservar mesa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <h1>Comida de fogão à lenha, ingredientes da horta ao lado.</h1>
+                <p>cozinha brasileira feita devagar, com legumes colhidos de manhã e carnes na brasa. Almoço e jantar, de terça a domingo.</p>
+                <div class="hero-acoes"><!--FLEXBOX: botões lado a lado-->
+                    <a class="botao" href="#cardapio">Ver cardápio</a>
+                    <a class="botao botao-claro" href="#visite">Como chegar</a>
+                </div>
+            </div>
+            <div class="mosaico" aria-hidden="true">
+                <div class="tile t1">🥩​</div>
+                <div class="tile t2">​🌽​</div>
+                <div class="tile t3">​🍅​​</div>
+                <div class="tile t4">​​​​🔥​</div>
+            </div>
+        </section>
+        <section class="secao" id="sobre">
+            <h2>Do jeito que a gente come em casa.</h2>
+            <div class="sobre-grid">
+                <article class="destaque">
+                    <h3>Horta própria</h3>
+                    <p>Folhas, ervas e legumes vêm de um canteiro a 200 metros da cozinha</p>
+                </article>
+                <article class="destaque">
+                    <h1>Fogo de verdade</h1>
+                    <p>Brasa de lenha de reflorestamento em todos os pratos de carne</p>
+                </article>
+                <article class="destaque">
+                    <h1>Produtor local</h1>
+                    <p>Queijos, café e farinha de sete produtores da região</p>
+                </article>
+            </div>
+        </section>
+        <section class="secao secao-escura" id="cardapio">
+            <h2>Cardápio</h2>
+            <div class="cardapio-grid">
+
+                <article class="prato">
+                    <div class="prato-foto cor-1">🥩​</div>
+                    <div class="prato-corpo">
+                        <div class="prato-linha"><!--FLEXBOX: nome ... preço-->
+                            <h3>Fraldinha na brasa</h3>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
